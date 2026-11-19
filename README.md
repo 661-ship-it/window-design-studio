@@ -1,12 +1,12 @@
-# 门窗 CAD 在线设计工作台
+# 门窗二维设计与出图工作台 | Window Design Studio
 
-这是一个以 HTML、原生 JavaScript 和 SVG 实现的轻量级二维门窗绘图工具。面向门窗方案设计、基础门窗示意图和二维图形表达，打开网页即可使用，不需要安装传统 CAD 软件，也不依赖 AI 模型或云端登录服务。
+Window Design Studio（门窗二维设计与出图工作台）是一个以 HTML、原生 JavaScript 和 SVG 实现的轻量级二维门窗绘图工具。面向门窗方案设计、示意图绘制和图纸输出，浏览器打开即可使用，不需要安装传统 CAD 软件，也不依赖 AI 模型或云端登录服务。
 
 ## 在线使用
 
 工作台已通过 GitHub Pages 部署，其他人可以直接打开以下地址使用：
 
-https://661-ship-it.github.io/--0/
+https://661-ship-it.github.io/window-design-studio/
 
 如果网址暂时无法打开，请稍后重试，或到仓库 Settings → Pages 检查部署状态。当前发布源为 main 分支的仓库根目录（/(root)）。
 
