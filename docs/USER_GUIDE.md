@@ -1,10 +1,10 @@
-# 用户操作手册
+# Window Design Studio 用户操作手册
 
 本手册对应仓库根目录的 index.html。界面按钮和功能以当前程序为准。
 
 ## 1. 打开工作台
 
-- 在线使用：Pages 配置完成后，访问 https://661-ship-it.github.io/--0/ 。如果页面暂时打不开，说明 Pages 尚未发布或部署仍在进行。
+- 在线使用：访问 https://661-ship-it.github.io/window-design-studio/ 。如果页面暂时打不开，请稍后重试，或检查仓库 Pages 部署状态。
 - 本地使用：下载仓库中的 index.html，使用较新版本的 Chrome 或 Edge 打开。程序没有外部资源依赖。
 
 建议使用桌面浏览器。工具栏项目较多，窗口较窄时可横向滚动工具栏。
