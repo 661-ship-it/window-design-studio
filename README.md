@@ -4,11 +4,11 @@
 
 ## 在线使用
 
-GitHub Pages 尚未完成配置，网页目前还不能确认已上线。配置 Pages 后，预期访问地址为：
+工作台已通过 GitHub Pages 部署，其他人可以直接打开以下地址使用：
 
 https://661-ship-it.github.io/--0/
 
-请在仓库 Settings → Pages 中选择从分支发布，分支选 main、目录选 /(root)，保存后等待 GitHub 部署完成。
+如果网址暂时无法打开，请稍后重试，或到仓库 Settings → Pages 检查部署状态。当前发布源为 main 分支的仓库根目录（/(root)）。
 
 ## 当前功能
 
