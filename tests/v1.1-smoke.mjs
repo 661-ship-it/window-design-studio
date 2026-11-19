@@ -156,6 +156,22 @@ async function main() {
   assert.equal(await evaluate('scene.objects.length'), 3);
 
   await click(`[data-id="${targetId}"]`);
+  await click('#flipXBtn');
+  assert.equal(await evaluate(`scene.objects.find(o=>o.type==="dimension"&&o.dimensionAxis==="width").reverse`), true, 'width dimension reverses with horizontal component flip');
+  assert.equal(await evaluate(`scene.objects.find(o=>o.type==="dimension"&&o.dimensionAxis==="height").reverse`), false);
+  assert.ok(await evaluate(`objectSVG(scene.objects.find(o=>o.type==="dimension"&&o.dimensionAxis==="width")).includes('x2="-1500"')`), 'flipped width dimension spans back toward the component');
+  await click('#flipYBtn');
+  assert.equal(await evaluate(`scene.objects.filter(o=>o.type==="dimension").every(d=>d.reverse)`), true, 'both dimensions reverse with vertical component flip');
+  assert.ok(await evaluate(`objectSVG(scene.objects.find(o=>o.type==="dimension"&&o.dimensionAxis==="height")).includes('y2="-1800"')`), 'flipped height dimension spans back toward the component');
+  await click('#undoBtn');
+  await click('#undoBtn');
+  assert.equal(await evaluate(`scene.objects.filter(o=>o.type==="dimension").every(d=>!d.reverse)`), true, 'undo restores normal dimension orientation');
+
+  await click(`[data-id="${targetId}"]`);
+  assert.equal(await setField('rotation', 90), true);
+  assert.equal(await evaluate('scene.objects.filter(o=>o.type==="dimension").every(d=>d.rotation===90)'), true, 'linked dimensions follow component rotation');
+  assert.equal(await setField('rotation', 0), true);
+  await click(`[data-id="${targetId}"]`);
   assert.equal(await setField('w', 800), true);
   assert.equal(await setField('h', 1400), true);
   assert.equal(await evaluate(`scene.objects.find(o=>o.type==="dimension"&&o.dimensionAxis==="width").text`), '800');
